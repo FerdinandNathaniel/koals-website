@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Placeholder illustrated journal spread">
+  <rect width="480" height="300" fill="#efe7d6"/>
+  <rect x="8" y="8" width="464" height="284" fill="none" stroke="#6b6559" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="240" y1="8" x2="240" y2="292" stroke="#6b6559" stroke-width="1" stroke-dasharray="2 3"/>
+  <text x="240" y="142" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#2b2a28">Journal Spread</text>
+  <text x="240" y="166" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#6b6559">Science illustration</text>
+</svg>

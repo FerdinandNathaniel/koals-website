@@ -1,0 +1,48 @@
+---
+// Minimal nav on purpose — the work is the point, not the chrome.
+---
+
+<header class="site-header">
+  <a href="/" class="wordmark">Koals</a>
+  <nav>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+    padding: var(--space-6);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .wordmark {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    color: var(--color-ink);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  nav {
+    display: flex;
+    gap: var(--space-6);
+  }
+
+  nav a {
+    color: var(--color-ink-muted);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  nav a:hover {
+    color: var(--color-ink);
+  }
+</style>

@@ -1,0 +1,56 @@
+---
+interface Props {
+  title: string;
+  category: string;
+  image: string;
+  alt: string;
+}
+
+const { title, category, image, alt } = Astro.props;
+---
+
+<figure class="card">
+  <img src={image} alt={alt} loading="lazy" />
+  <figcaption>
+    <span class="title">{title}</span>
+    <span class="category">{category}</span>
+  </figcaption>
+</figure>
+
+<style>
+  .card {
+    margin: 0 0 var(--space-8);
+    break-inside: avoid;
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: var(--radius-soft);
+    transition: opacity var(--duration-soft) var(--ease-soft);
+  }
+
+  .card:hover img {
+    opacity: 0.85;
+  }
+
+  figcaption {
+    margin-top: var(--space-2);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .title {
+    font-family: var(--font-serif);
+    font-size: var(--text-sm);
+    color: var(--color-ink);
+  }
+
+  .category {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+</style>

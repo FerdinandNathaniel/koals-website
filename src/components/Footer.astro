@@ -1,0 +1,32 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <p>&copy; {year} Koals</p>
+  <a href="mailto:hello@koals.eu">hello@koals.eu</a>
+</footer>
+
+<style>
+  .site-footer {
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+    margin-top: var(--space-16);
+    padding: var(--space-8) var(--space-6) var(--space-12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .site-footer p {
+    margin: 0;
+  }
+
+  .site-footer a {
+    color: var(--color-ink-muted);
+  }
+</style>

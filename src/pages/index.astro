@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PortfolioCard from '../components/PortfolioCard.astro';
+import { portfolioItems } from '../data/portfolio.js';
+---
+
+<BaseLayout title="Work">
+  <div class="grid">
+    {portfolioItems.map((item) => <PortfolioCard {...item} />)}
+  </div>
+</BaseLayout>
+
+<style>
+  .grid {
+    column-count: 1;
+    column-gap: var(--space-8);
+    padding-block: var(--space-4) var(--space-16);
+  }
+
+  @media (min-width: 640px) {
+    .grid {
+      column-count: 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid {
+      column-count: 3;
+    }
+  }
+</style>

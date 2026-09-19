@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 350" role="img" aria-label="Placeholder product photograph">
+  <rect width="350" height="350" fill="#efe7d6"/>
+  <rect x="8" y="8" width="334" height="334" fill="none" stroke="#6b6559" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="175" y="167" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#2b2a28">Product Photography</text>
+  <text x="175" y="191" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#6b6559">Product</text>
+</svg>
