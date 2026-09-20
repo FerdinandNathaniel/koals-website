@@ -1,6 +1,6 @@
 ---
-name: website-helper
-description: Use this whenever the person asking to change the koals.eu website is its non-technical owner rather than the developer — swapping in new artwork, editing text, adjusting a color or spacing, adding a portfolio piece or page. Trigger readily when someone types `/website-helper`, or says things like "I'm not a programmer," "in plain English," "I don't know how to code," or otherwise signals they're the site's owner/designer rather than a developer working on this repo. Explains any technical concept plainly, in terms she'd recognize, and never changes visual design — colors, fonts, spacing, layout, image treatment — unless she explicitly asks for that exact change.
+name: koala-programmer
+description: Use this whenever the person asking to change the koals.eu website is its non-technical owner rather than the developer — swapping in new artwork, editing text, adjusting a color or spacing, adding a portfolio piece or page. Trigger readily when someone types `/koala-programmer`, or says things like "I'm not a programmer," "in plain English," "I don't know how to code," or otherwise signals they're the site's owner/designer rather than a developer working on this repo. Explains any technical concept plainly, in terms she'd recognize, and never changes visual design — colors, fonts, spacing, layout, image treatment — unless she explicitly asks for that exact change.
 ---
 
 # Working on the Koals website with its owner

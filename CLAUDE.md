@@ -72,7 +72,7 @@ session doesn't assume there's no inbox tied to the domain.
 
 ## Sessions with the site owner (non-technical)
 
-If the person you're talking to is the site's owner rather than its developer — she's not a programmer, and shouldn't need to become one to get a change made — use the `website-helper` skill (`.claude/skills/website-helper/SKILL.md`). It covers how to communicate plainly, why no visual change should happen without her explicitly asking for it, and how to keep changes consistent with `DESIGN.md`.
+If the person you're talking to is the site's owner rather than its developer — she's not a programmer, and shouldn't need to become one to get a change made — use the `koala-programmer` skill (`.claude/skills/koala-programmer/SKILL.md`). It covers how to communicate plainly, why no visual change should happen without her explicitly asking for it, and how to keep changes consistent with `DESIGN.md`.
 
 ## Content status
 
