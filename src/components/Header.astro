@@ -3,7 +3,7 @@
 ---
 
 <header class="site-header">
-  <a href="/" class="wordmark">Koals</a>
+  <a href="/" class="wordmark" aria-label="Koals"><span class="logo-mark"></span></a>
   <nav>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
@@ -21,12 +21,22 @@
   }
 
   .wordmark {
-    font-family: var(--font-serif);
-    font-size: var(--text-lg);
-    font-weight: 500;
-    color: var(--color-ink);
-    text-decoration: none;
-    letter-spacing: 0.02em;
+    display: block;
+  }
+
+  .logo-mark {
+    display: block;
+    height: 2.5875rem;
+    aspect-ratio: 1559 / 615;
+    background-color: var(--color-ink);
+    -webkit-mask-image: url('/logo.png');
+    mask-image: url('/logo.png');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: left center;
+    mask-position: left center;
   }
 
   nav {

@@ -10,13 +10,13 @@
      No brand colors exist yet. This is a warm, muted starting point picked
      to be easy to swap. Alternates to try are sketched out below — replace
      the active block with one of them, or invent a new one. */
-  --color-paper: #f6f1e6;        /* page background — warm cream, not white */
-  --color-paper-alt: #efe7d6;    /* cards, section backgrounds */
-  --color-ink: #2b2a28;          /* primary text — soft charcoal, not black */
-  --color-ink-muted: #6b6559;    /* secondary text, captions */
-  --color-accent: #7c8f5f;       /* links, highlights — soft sage */
-  --color-accent-ink: #f6f1e6;   /* text on top of --color-accent */
-  --color-border: rgba(43, 42, 40, 0.14);
+  --color-paper: #DAD9D1;        /* page background — light warm greige */
+  --color-paper-alt: #667879;    /* cards, section backgrounds — muted teal-gray */
+  --color-ink: #202318;          /* primary text — near-black dark olive */
+  --color-ink-muted: #474833;    /* secondary text, captions — dark olive */
+  --color-accent: #8EAAD1;       /* links, highlights — soft blue */
+  --color-accent-ink: #202318;   /* text on top of --color-accent */
+  --color-border: rgba(32, 35, 24, 0.14);
 
   /*
   -- alternate: dusty terracotta --

@@ -28,4 +28,12 @@ import { portfolioItems } from '../data/portfolio.js';
       column-count: 3;
     }
   }
+
+  .grid:hover :global(.card img) {
+    opacity: 0.5;
+  }
+
+  .grid :global(.card:hover img) {
+    opacity: 1;
+  }
 </style>
