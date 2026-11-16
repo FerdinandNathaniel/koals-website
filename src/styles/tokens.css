@@ -17,6 +17,9 @@
   --color-accent: #8EAAD1;       /* links, highlights — soft blue */
   --color-accent-ink: #202318;   /* text on top of --color-accent */
   --color-border: rgba(32, 35, 24, 0.14);
+  --color-mount: #fbfaf6;        /* paper mat behind a framed/photographed piece */
+  --color-image-tint: var(--color-ink-muted); /* wash over a framed piece's white background */
+  --shadow-paper: 0 14px 24px -10px rgba(32, 35, 24, 0.28), 0 3px 8px -3px rgba(32, 35, 24, 0.16);
 
   /*
   -- alternate: dusty terracotta --

@@ -4,13 +4,24 @@ interface Props {
   category: string;
   image: string;
   alt: string;
+  slug?: string;
+  framed?: boolean;
 }
 
-const { title, category, image, alt } = Astro.props;
+const { title, category, image, alt, slug, framed = false } = Astro.props;
+const Wrapper = slug ? 'a' : 'div';
+const wrapperProps = slug ? { href: `/work/${slug}/` } : {};
 ---
 
 <figure class="card">
-  <img src={image} alt={alt} loading="lazy" />
+  <Wrapper class="card-link" {...wrapperProps}>
+    <div class:list={['frame', { framed }]}>
+      <div class="image-wrap">
+        <img src={image} alt={alt} loading="lazy" />
+        {framed && <div class="tint" aria-hidden="true"></div>}
+      </div>
+    </div>
+  </Wrapper>
   <figcaption>
     <span class="title">{title}</span>
     <span class="category">{category}</span>
@@ -23,10 +34,34 @@ const { title, category, image, alt } = Astro.props;
     break-inside: avoid;
   }
 
-  .card img {
+  .card-link {
+    display: block;
+  }
+
+  .frame img {
     width: 100%;
     border-radius: var(--radius-soft);
     transition: opacity var(--duration-soft) var(--ease-soft);
+  }
+
+  .frame.framed {
+    box-shadow: var(--shadow-paper);
+    border-radius: var(--radius-soft);
+  }
+
+  .image-wrap {
+    position: relative;
+    border-radius: var(--radius-soft);
+    overflow: hidden;
+  }
+
+  .tint {
+    position: absolute;
+    inset: 0;
+    background: var(--color-image-tint);
+    opacity: 0.07;
+    mix-blend-mode: multiply;
+    pointer-events: none;
   }
 
   figcaption {

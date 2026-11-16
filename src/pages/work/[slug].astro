@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { portfolioItems } from '../../data/portfolio.js';
+
+export function getStaticPaths() {
+  return portfolioItems
+    .filter((item) => item.slug)
+    .map((item) => ({
+      params: { slug: item.slug },
+      props: { item },
+    }));
+}
+
+const { item } = Astro.props;
+const images = item.gallery ?? [{ image: item.image, alt: item.alt }];
+---
+
+<BaseLayout title={item.title}>
+  <a href="/" class="back">&larr; Back to work</a>
+  <div class="piece">
+    <div class="gallery">
+      {images.map((img) => (
+        <div class="item">
+          <div class:list={['frame', { framed: item.framed }]}>
+            <div class="image-wrap">
+              {img.link ? (
+                <a href={img.link} target="_blank" rel="noopener noreferrer"><img src={img.image} alt={img.alt} /></a>
+              ) : (
+                <img src={img.image} alt={img.alt} />
+              )}
+              {item.framed && <div class="tint" aria-hidden="true"></div>}
+            </div>
+          </div>
+          {img.link && img.linkLabel && (
+            <a class="watch" href={img.link} target="_blank" rel="noopener noreferrer">{img.linkLabel} &nearr;</a>
+          )}
+        </div>
+      ))}
+    </div>
+    <div class="details">
+      <p class="category">{item.category}</p>
+      {item.description && <p class="description" set:html={item.description} />}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .back {
+    display: inline-block;
+    margin-bottom: var(--space-8);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+
+  .back:hover {
+    color: var(--color-ink);
+  }
+
+  .piece {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    padding-bottom: var(--space-16);
+  }
+
+  @media (min-width: 768px) {
+    .piece {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  .gallery {
+    flex: 1 1 60%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .watch {
+    align-self: flex-start;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+
+  .watch:hover {
+    color: var(--color-ink);
+  }
+
+  .frame img {
+    width: 100%;
+    display: block;
+    border-radius: var(--radius-soft);
+  }
+
+  .frame.framed {
+    box-shadow: var(--shadow-paper);
+    border-radius: var(--radius-soft);
+  }
+
+  .image-wrap {
+    position: relative;
+    border-radius: var(--radius-soft);
+    overflow: hidden;
+  }
+
+  .tint {
+    position: absolute;
+    inset: 0;
+    background: var(--color-image-tint);
+    opacity: 0.07;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+
+  .details {
+    flex: 1 1 40%;
+    padding-top: var(--space-4);
+  }
+
+  .category {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: var(--space-4);
+  }
+
+  .description {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-ink);
+    margin: 0;
+  }
+</style>

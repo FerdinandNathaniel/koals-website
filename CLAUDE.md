@@ -44,6 +44,13 @@ inventing a new direction.
   `image` path per entry) as real work becomes available. Their colors are
   hardcoded to match the current placeholder palette — no need to keep
   them in sync if the palette changes, since they'll be replaced anyway.
+- `public/portfolio/` — real artwork. **Never commit full-resolution
+  originals** (the repo is public, so they'd stay in git history): resize
+  to 1400px wide first with `sharp` (already installed via Astro), e.g.
+  `sharp(src).resize({ width: 1400, withoutEnlargement: true })`. This is
+  the owner's chosen protection against print-quality copying.
+- `public/robots.txt` — allows search engines, asks AI-training crawlers
+  (GPTBot, CCBot, Google-Extended, etc.) not to crawl the site.
 - `public/CNAME` — contains `koals.eu`, required by GitHub Pages for the
   custom domain. Don't delete it.
 
